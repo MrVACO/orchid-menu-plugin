@@ -1,0 +1,31 @@
+{
+    "name": "mr-vaco/orchid-menu-plugin",
+    "description": "Menu management for display in the frontend",
+    "keywords": [
+        "orchid menu",
+        "orchid menu manager",
+        "orchid menu management",
+        "orchid frontend menu"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "MrVaco\\Orchid\\Menu\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MrVaco\\Orchid\\Menu\\ServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
