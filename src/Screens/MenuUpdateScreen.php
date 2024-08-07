@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace MrVaco\Orchid\Menu\Screen;
+namespace MrVaco\Orchid\Menu\Screens;
 
 use MrVaco\Orchid\Menu\Classes\MenuEnum;
 use MrVaco\Orchid\Menu\Traits\MenuCUTrait;

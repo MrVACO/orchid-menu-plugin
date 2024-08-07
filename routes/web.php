@@ -3,9 +3,9 @@
 declare(strict_types = 1);
 
 use MrVaco\Orchid\Menu\Classes\MenuEnum;
-use MrVaco\Orchid\Menu\Screen\MenuCreateScreen;
-use MrVaco\Orchid\Menu\Screen\MenuListScreen;
-use MrVaco\Orchid\Menu\Screen\MenuUpdateScreen;
+use MrVaco\Orchid\Menu\Screens\MenuCreateScreen;
+use MrVaco\Orchid\Menu\Screens\MenuListScreen;
+use MrVaco\Orchid\Menu\Screens\MenuUpdateScreen;
 use Tabuna\Breadcrumbs\Trail;
 
 app('router')
