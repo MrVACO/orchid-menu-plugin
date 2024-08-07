@@ -2,6 +2,7 @@
 
 namespace MrVaco\Orchid\Menu\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Orchid\Screen\AsSource;
@@ -21,5 +22,10 @@ class Menu extends Model
     public function parent(): BelongsTo
     {
         return $this->belongsTo(self::class, 'parent_id');
+    }
+
+    public function scopeWithoutCurrent(Builder $query, int $id): Builder
+    {
+        return $query->where('id', '!=', $id);
     }
 }

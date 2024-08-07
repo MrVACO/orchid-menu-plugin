@@ -80,7 +80,7 @@ trait MenuCUTrait
                     Select::make('menu.parent_id')
                         ->title(__('Parent'))
                         ->empty(__('do_not_specify'))
-                        ->fromQuery(Menu::query(), 'name'),
+                        ->fromQuery(Menu::query()->withoutCurrent((int) $this->menu->id), 'name'),
 
                     Select::make('menu.target')
                         ->options([
