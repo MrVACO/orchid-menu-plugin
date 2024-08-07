@@ -1,0 +1,25 @@
+<?php
+
+namespace MrVaco\Orchid\Menu\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Orchid\Screen\AsSource;
+
+class Menu extends Model
+{
+    use AsSource;
+
+    protected $fillable = [
+        'parent_id',
+        'name',
+        'description',
+        'slug',
+        'target',
+    ];
+
+    public function parent(): BelongsTo
+    {
+        return $this->belongsTo(self::class, 'parent_id');
+    }
+}
