@@ -40,7 +40,6 @@ class ServiceProvider extends OrchidServiceProvider
     {
         app('router')
             ->domain((string) config('platform.domain'))
-            ->prefix(Dashboard::prefix('/'))
             ->group(__DIR__ . '/../routes/web.php');
     }
 
