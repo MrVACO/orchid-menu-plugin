@@ -23,6 +23,13 @@
             ]
         }
     },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan vendor:publish --tag=plugin-migrations",
+            "@php artisan migrate",
+            "@php artisan route:cache"
+        ]
+    },
     "config": {
         "sort-packages": true
     },
