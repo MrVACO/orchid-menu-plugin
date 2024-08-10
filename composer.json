@@ -24,7 +24,12 @@
         }
     },
     "scripts": {
-        "post-autoload-dump": [
+        "post-install-cmd": [
+            "@php artisan vendor:publish --tag=plugin-migrations",
+            "@php artisan migrate",
+            "@php artisan route:cache"
+        ],
+        "post-update-cmd": [
             "@php artisan vendor:publish --tag=plugin-migrations",
             "@php artisan migrate",
             "@php artisan route:cache"
